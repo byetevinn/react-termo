@@ -1,7 +1,17 @@
-import './App.css';
+import { ThemeProvider } from 'styled-components';
+
+import Termo from './pages/termo';
+
+import Global from './styles/global';
+import { theme } from './styles/theme';
 
 const App = () => {
-  return <div className="App"></div>;
+  return (
+    <ThemeProvider theme={theme}>
+      <Global />
+      <Termo />
+    </ThemeProvider>
+  );
 };
 
 export default App;
